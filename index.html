@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>男性声優 好き顔9選</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       START
+  ========================== -->
+  <section id="start-screen" class="screen active">
+
+    <div class="start-inner">
+
+      <div class="heart">♡</div>
+
+      <h1>男性声優<br>好き顔9選</h1>
+
+      <p class="start-description">
+        あなたの「好きな顔」を選んで<br>
+        好き顔ランキングTOP9を作ろう！
+      </p>
+
+      <button id="start-button" class="main-button">
+        予選をはじめる
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRELIM
+  ========================== -->
+  <section id="prelim-screen" class="screen">
+
+    <div class="page-inner">
+
+      <div class="progress-area">
+
+        <div class="progress-title">
+          🎙️ 予選
+        </div>
+
+        <div id="prelim-progress">
+          1 / 25
+        </div>
+
+      </div>
+
+
+      <h2>
+        気になる顔を選んでね
+      </h2>
+
+      <p class="description">
+        表示された6人の中から<br>
+        気になる顔を<strong>最大3人</strong>まで選んでね<br>
+        <span>（0人でもOK）</span>
+      </p>
+
+
+      <!-- 6人のカードをJSで生成 -->
+      <div id="prelim-members" class="member-grid">
+      </div>
+
+
+      <div class="prelim-buttons">
+
+        <!-- 0人のまま進む -->
+        <button
+          id="prelim-skip-button"
+          class="sub-button"
+          type="button"
+        >
+          未選択で次へ
+        </button>
+
+        <!-- 1～3人選択して進む -->
+        <button
+          id="prelim-next-button"
+          class="main-button"
+          type="button"
+        >
+          決定して次へ
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRELIM RESULT
+  ========================== -->
+  <section id="prelim-result-screen" class="screen">
+
+    <div class="page-inner">
+
+      <div class="result-icon">
+        🎉
+      </div>
+
+      <h2>
+        予選終了！
+      </h2>
+
+      <p class="result-lead">
+        150名の中から<br>
+        <strong>36名</strong>が本戦へ進出します。
+      </p>
+
+
+      <div class="finalist-count">
+        <span class="large-number">36</span>
+        <span>名</span>
+      </div>
+
+
+      <p class="result-description">
+        ここからは2人ずつの二者択一で<br>
+        あなたの「好き顔9選」と<br>
+        全順位を決定します。
+      </p>
+
+
+      <button
+        id="start-battle-button"
+        class="main-button"
+        type="button"
+      >
+        本戦をはじめる
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BATTLE
+  ========================== -->
+  <section id="battle-screen" class="screen">
+
+    <div class="page-inner battle-inner">
+
+      <div class="battle-header">
+
+        <div class="battle-title">
+          ⚔️ 本戦
+        </div>
+
+        <div id="battle-progress" class="battle-progress">
+          1 / 90
+        </div>
+
+      </div>
+
+
+      <h2 class="battle-question">
+        より好みの顔を<br>
+        1人タップしてください
+      </h2>
+
+
+      <div id="battle-members" class="battle-members">
+
+        <!-- JSで2人を生成 -->
+
+      </div>
+
+
+      <button
+        id="draw-button"
+        class="draw-button"
+        type="button"
+      >
+        両方好き（引き分け）
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL RESULT
+  ========================== -->
+  <section id="result-screen" class="screen">
+
+    <div class="page-inner result-page">
+
+      <div class="result-icon">
+        🎉
+      </div>
+
+      <h2>
+        あなたの好き顔9選
+      </h2>
+
+      <p class="result-description">
+        本戦の結果から<br>
+        あなたの好き顔ランキングが決まりました！
+      </p>
+
+
+      <!-- =====================
+           TOP 9
+      ====================== -->
+      <div class="top9-section">
+
+        <h3>
+          ♡ 私の好き顔9選 ♡
+        </h3>
+
+        <div
+          id="top9-members"
+          class="top9-grid"
+        >
+          <!-- JSで生成 -->
+        </div>
+
+      </div>
+
+
+      <!-- =====================
+           ALL RANKING
+      ====================== -->
+      <div class="ranking-section">
+
+        <h3>
+          本戦進出36名 順位一覧
+        </h3>
+
+        <div
+          id="ranking-list"
+          class="ranking-list"
+        >
+          <!-- JSで生成 -->
+        </div>
+
+      </div>
+
+
+      <!-- =====================
+           RESTART
+      ====================== -->
+      <div class="result-buttons">
+
+        <button
+          id="restart-button"
+          class="main-button"
+          type="button"
+        >
+          もう一度遊ぶ
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
