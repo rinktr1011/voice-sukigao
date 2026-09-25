@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>男性声優 好き顔TOP9</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <!-- =====================================================
+         START
+    ====================================================== -->
+
+    <section id="start-screen" class="screen active">
+
+      <div class="start-inner">
+
+        <div class="start-heart">
+          ♡
+        </div>
+
+        <p class="start-small">
+          あなたの
+        </p>
+
+        <h1>
+          男性声優<br>
+          <span>好き顔TOP9</span>
+        </h1>
+
+        <p class="start-description">
+          あなたの「好きな顔」を選んで<br>
+          あなただけのTOP9を作ろう
+        </p>
+
+        <button
+          id="start-button"
+          class="main-button"
+        >
+          ♡ 予選をはじめる
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRELIM
+    ====================================================== -->
+
+    <section id="prelim-screen" class="screen">
+
+      <div class="phase-header">
+
+        <div class="phase-title">
+          🎙️ 予選
+        </div>
+
+        <div
+          id="prelim-page"
+          class="progress-number"
+        >
+          1 / 29
+        </div>
+
+      </div>
+
+
+      <div class="progress-track">
+
+        <div
+          id="prelim-progress-fill"
+          class="progress-fill"
+        ></div>
+
+      </div>
+
+
+      <h2>
+        気になる顔を選んでね♡
+      </h2>
+
+      <p class="description">
+        表示された6人の中から<br>
+        <strong>最大3人まで♡</strong><br>
+        <span>（0人でもOK）</span>
+      </p>
+
+
+      <div
+        id="prelim-members"
+        class="member-grid"
+      ></div>
+
+
+      <div class="prelim-buttons">
+
+        <button
+          id="prelim-skip-button"
+          class="sub-button"
+        >
+          未選択で次へ
+        </button>
+
+        <button
+          id="prelim-next-button"
+          class="main-button"
+        >
+          ♡ 決定して次へ
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRELIM RESULT
+    ====================================================== -->
+
+    <section
+      id="prelim-result-screen"
+      class="screen"
+    >
+
+      <div class="result-icon">
+        🎉
+      </div>
+
+      <h2>
+        予選終了！
+      </h2>
+
+      <p class="result-lead">
+        174名の中から<br>
+
+        <strong id="prelim-finalist-count">
+          -
+        </strong>
+
+        名が本戦へ進出します。
+      </p>
+
+
+      <div class="finalist-count">
+
+        <div
+          id="prelim-finalist-number"
+          class="large-number"
+        >
+          -
+        </div>
+
+      </div>
+
+
+      <p class="result-description">
+        ここからは2人ずつの二者択一で<br>
+        あなたの「好き顔TOP9」を<br>
+        決定します♡
+      </p>
+
+
+      <button
+        id="start-battle-button"
+        class="main-button"
+      >
+        ♡ 本戦をはじめる
+      </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         BATTLE
+    ====================================================== -->
+
+    <section
+      id="battle-screen"
+      class="screen"
+    >
+
+      <div class="phase-header">
+
+        <div class="phase-title">
+          ⚔️ 本戦
+        </div>
+
+        <div
+          id="battle-page"
+          class="progress-number"
+        >
+          1 / 90
+        </div>
+
+      </div>
+
+
+      <div class="progress-track">
+
+        <div
+          id="battle-progress-fill"
+          class="progress-fill"
+        ></div>
+
+      </div>
+
+
+      <h2 class="battle-question">
+        より好みの顔を1人タップしてね
+      </h2>
+
+      <p class="description">
+        直感で選んでOK♡
+      </p>
+
+
+      <div
+        id="battle-members"
+        class="battle-members"
+      ></div>
+
+
+      <div>
+
+        <button
+          id="draw-button"
+          class="sub-button draw-button"
+        >
+          ♡ 両方好き（引き分け）
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESULT
+    ====================================================== -->
+
+    <section
+      id="result-screen"
+      class="screen"
+    >
+
+      <div class="result-title-area">
+
+        <p class="result-small-title">
+          あなたの男性声優
+        </p>
+
+        <h2>
+          好き顔TOP9
+        </h2>
+
+        <p class="result-subtitle">
+          あなたが選んだ「好き」がここに♡
+        </p>
+
+      </div>
+
+
+      <!--
+        TOP9
+
+        1位 → 中央
+        2位 → 左
+        3位 → 右
+
+        4〜6位 → 上段
+        7〜9位 → 下段
+
+        CSSのnth-childで自動配置
+      -->
+
+      <div
+        id="top9-members"
+        class="top9-grid"
+      ></div>
+
+
+      <!-- =================================================
+           RANKING
+      ================================================== -->
+
+      <div class="ranking-section">
+
+        <h3>
+          本戦順位
+        </h3>
+
+        <div
+          id="ranking-list"
+          class="ranking-list"
+        ></div>
+
+      </div>
+
+
+      <div class="result-buttons">
+
+        <button
+          id="restart-button"
+          class="main-button"
+        >
+          ♡ もう一度遊ぶ
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
